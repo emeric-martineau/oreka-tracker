@@ -2,6 +2,15 @@
 = Oréka Tracker =
 =================
 
+0. Tables des matières
+----------------------
+  1. Questions fréquemment posées
+  2. Informations de version
+  3. Futur version
+  4. Informations sur le logiciel
+  5. Bugs connus
+  6. Remerciements
+
 1. Questions fréquemment posées :
 ---------------------------------
   * Qu'est-ce qu'"Orécka Tracker" ?
@@ -20,12 +29,21 @@
       Ce logiciel est compatible avec la version 0.632 et 0.700.
 
   * Comment l'idée est venue ?
-      L'idée est venue en voulant savoir où les informations étaient
+      L'idée est venue en voulant  savoir  où  les  informations  étaient
     inscrite.
+
+  * Ce programme est-il légal ?
+      Oui, ce programme n'enfraînd aucune loi, bien  au  contraire.  Pour
+    être sûr de cela, lisez le fichier INFORMATIQUE-ET-LIBERTE.TXT.
 
 2. Informations de version :
 ----------------------------
-  version 0.3 : meilleurs présentation.  Gestion  des  e-mails  (cree ou non).
+  version 0.4 : corrections de  bugs,  enregistrement  dans  la  base  de
+                registre, dans un fichier, impressions des  informations,
+                possibilité de  ré-installation  rapide.  Correction  des
+                fautes d'orthographes. Liste de tous les âges disponibles
+                Liste des indicatifs téléphoniques, du sexe ...
+  version 0.3 : meilleurs présentation. Gestion des e-mails (cree ou non)
                 Modification pour ce qui est du sexe. Création du logo.
   version 0.2 : permet de lire et modifier les favoris
   version 0.1 : permet de lire les informations suivantes :
@@ -47,16 +65,14 @@
 
 3. Futur version :
 ------------------
-    La  futur  version  (0.4)  intégrera  l'enregistrement  des   informations
-  dans la base de registre, dans un fichier, un fichier  de  sauvergarde  pour
-  l'instalation plus rapide d'oréka et l'impression de ses informations.  Sauf
-  si je modifie d'autres truc visuel ou fixe des bugs entre temps.  Comme  par
-  exemple toutes les tranches d'âge.
+    La future version (0.5), intégrera les nouvelles clefs exploitées par
+  la version 0.700 du logiciel Oréka et proposera  la  liste  des  modems
+  disponibles dur votre ordinateur.
 
 4. Informations sur le logiciel :
 ---------------------------------
-  Version      : 0.3
-  Date         : 30/01/2001
+  Version      : 0.4
+  Date         : 06/02/2001
   Autheur      : Bubule
   Architecture : Windows 9x/ME/NT/2000 pour processeur x86
   Langage      : Delphi 4
@@ -68,3 +84,17 @@
   GNU_LICENCE.TXT pour en savoir plus. Pour un résumé rapide, vous pouvez
   librement diffuser, modifier ce logiciel à condition  d'y  inclure  les
   sources (du programme originel) et la licence.
+
+5. Bugs connus :
+----------------
+    En fait, il ne s'agit pas vraiment de bugs, mais  des  problèmes  qui
+  peuvent survenir. Des messages d'erreur imbuvables risque  d'apparaître
+  si vous tentez d'enregistrer un fichier sur un périphérique où il n'y a
+  plus de place disponible ou protégé en écriture.
+
+6. Remerciements :
+------------------
+    Je remercie mon père d'avoir eu la folie d'acheter un jour Delphi 4 (
+  finallement c'est une bonne chose), Borland pour avoir fait l'excellent
+  Delphi 4 (continuez sûrtout !), P'tit Lu pour tester ce logiciel et les
+  vacances pour être arrivées au bon moment.
