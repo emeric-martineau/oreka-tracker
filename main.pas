@@ -62,11 +62,13 @@ type
     favoris_name: TEdit;
     url_label: TLabel;
     favoris_url: TEdit;
-    sexe: TEdit;
+    Image1: TImage;
+    sexe_combo: TComboBox;
     procedure FormCreate(Sender: TObject);
     procedure Favoris_listClick(Sender: TObject);
     procedure favoris_nameChange(Sender: TObject);
     procedure favoris_urlChange(Sender: TObject);
+    procedure exitClick(Sender: TObject);
     procedure creeeClick(Sender: TObject);
     procedure non_creeClick(Sender: TObject);
   private
@@ -95,6 +97,11 @@ implementation
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
+//if LoadOrekaKey() = False
+//then
+
+//if LoadOrekaFavoris = False
+//then
 if LoadOrekaKey
 then
     Form1.Caption := 'reussi' ;
@@ -116,8 +123,16 @@ begin
                  passwd.text := Registre.ReadString('Passwd') ;
                  modem.text := Registre.ReadString('Modem') ;
                  page_perso.text := Registre.ReadString('PagePersoURL') ;
+
+                 if (Registre.ReadString('Sexe') = 'sexem')
+                 then
+                     sexe_combo.ItemIndex := 0
+                 else if (Registre.ReadString('Sexe') = 'sexef')
+                 then
+                     sexe_combo.ItemIndex := 1
+                 else
+                     sexe_combo.ItemIndex := 2 ;
 // à améliorer
-                 sexe.text := Registre.ReadString('Sexe') ;
                  age.text := Registre.ReadString('TrancheAge') ;
 // fin
                  zone.text := Registre.ReadString('Zone') ;
@@ -228,6 +243,11 @@ begin
             ListeFavoris[i+1].url := favoris_url.text ;
         end ;
     end ;
+end;
+
+procedure TForm1.exitClick(Sender: TObject);
+begin
+    Application.Terminate ;
 end;
 
 procedure TForm1.non_creeClick(Sender: TObject);

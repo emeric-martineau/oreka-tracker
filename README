@@ -25,6 +25,8 @@
 
 2. Informations de version :
 ----------------------------
+  version 0.3 : meilleurs présentation.  Gestion  des  e-mails  (cree ou non).
+                Modification pour ce qui est du sexe. Création du logo.
   version 0.2 : permet de lire et modifier les favoris
   version 0.1 : permet de lire les informations suivantes :
                 - nom d'utilisateur
@@ -45,14 +47,16 @@
 
 3. Futur version :
 ------------------
-    La  futur  version  (0.3)  intégrera  l'enregistrement  des   informations
+    La  futur  version  (0.4)  intégrera  l'enregistrement  des   informations
   dans la base de registre, dans un fichier, un fichier  de  sauvergarde  pour
-  l'instalation plus rapide d'oréka et l'impression de ses informations.
+  l'instalation plus rapide d'oréka et l'impression de ses informations.  Sauf
+  si je modifie d'autres truc visuel ou fixe des bugs entre temps.  Comme  par
+  exemple toutes les tranches d'âge.
 
 4. Informations sur le logiciel :
 ---------------------------------
-  Version      : 0.2
-  Date         : 29/01/2001
+  Version      : 0.3
+  Date         : 30/01/2001
   Autheur      : Bubule
   Architecture : Windows 9x/ME/NT/2000 pour processeur x86
   Langage      : Delphi 4
