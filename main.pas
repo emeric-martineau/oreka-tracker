@@ -57,12 +57,22 @@ type
     cancel: TButton;
     exit: TButton;
     Label7: TLabel;
+    Favoris_list: TListBox;
+    favoris_name_label: TLabel;
+    favoris_name: TEdit;
+    url_label: TLabel;
+    favoris_url: TEdit;
     sexe: TEdit;
-    Label1: TLabel;
     procedure FormCreate(Sender: TObject);
+    procedure Favoris_listClick(Sender: TObject);
+    procedure favoris_nameChange(Sender: TObject);
+    procedure favoris_urlChange(Sender: TObject);
+    procedure creeeClick(Sender: TObject);
+    procedure non_creeClick(Sender: TObject);
   private
     { Déclarations privées}
     function LoadOrekaKey() : boolean ;
+    function LoadOrekaFavoris() : boolean ;
   public
     { Déclarations publiques}
   end;
@@ -74,8 +84,11 @@ type
   end ;
 var
   Form1: TForm1;
+  // liste des favoris
+  ListeFavoris : array[1..20] of RFavorisListe ;
 const
   OREKAPATH : string = 'software\ineo\' ;
+  OREKAPATHFAVORIS : string = 'software\ineo\favoris\' ;
 implementation
 
 {$R *.DFM}
@@ -103,7 +116,6 @@ begin
                  passwd.text := Registre.ReadString('Passwd') ;
                  modem.text := Registre.ReadString('Modem') ;
                  page_perso.text := Registre.ReadString('PagePersoURL') ;
-
 // à améliorer
                  sexe.text := Registre.ReadString('Sexe') ;
                  age.text := Registre.ReadString('TrancheAge') ;
@@ -150,5 +162,88 @@ begin
     end ;
 end ;
 
+function TForm1.LoadOrekaFavoris() : boolean ;
+var Registre : TRegistry ;
+    i : integer ;
+begin
+    Registre := TRegistry.Create ;
+    // par défaut on n'a pas réussi
+    LoadOrekaFavoris := False ;
+    try
+        // définit la clef racine
+        Registre.RootKey := HKEY_LOCAL_MACHINE ;
+
+        if Registre.OpenKeyReadOnly(OREKAPATHFAVORIS)
+        then begin
+            for i := 1 to 20 do
+            begin
+                ListeFavoris[i].nom := Registre.ReadString('FavorisMenu'+IntToStr(i)) ;
+                ListeFavoris[i].url := Registre.ReadString('FavorisURL'+IntToStr(i)) ;;
+            end ;
+
+            // On a réussi !
+            LoadOrekaFavoris := True ;
+        end ;
+    finally
+        // libère le registre
+        Registre.Free ;
+    end ;
+
+end ;
+
+procedure TForm1.Favoris_listClick(Sender: TObject);
+var i : integer ;
+begin
+    for i := 0 to 19 do
+    begin
+        if favoris_list.Selected[i]
+        then begin
+            favoris_name.text := ListeFavoris[i+1].nom ;
+            favoris_url.text  := ListeFavoris[i+1].url ;
+        end ;
+    end ;
+end;
+
+procedure TForm1.favoris_nameChange(Sender: TObject);
+var i : integer ;
+begin
+    // parcours la liste
+    for i := 0 to 19 do
+    begin
+        if favoris_list.Selected[i]
+        // si l'élément i est sélectionné
+        then begin
+            ListeFavoris[i+1].nom := favoris_name.text ;
+        end ;
+    end ;
+end;
+
+procedure TForm1.favoris_urlChange(Sender: TObject);
+var i : integer ;
+begin
+    for i := 0 to 19 do
+    begin
+        if favoris_list.Selected[i]
+        then begin
+            ListeFavoris[i+1].url := favoris_url.text ;
+        end ;
+    end ;
+end;
+
+procedure TForm1.non_creeClick(Sender: TObject);
+begin
+    utilisateur_mail.Enabled := False ;
+    passwd_mail.Enabled := False ;
+    adresse_server.Enabled := False ;
+    server_ip.Enabled := False ;
+end;
+
+procedure TForm1.creeeClick(Sender: TObject);
+begin
+    utilisateur_mail.Enabled := True ;
+    passwd_mail.Enabled := True ;
+    adresse_server.Enabled := True ;
+    server_ip.Enabled := True ;
+end;
 
 end.

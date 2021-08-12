@@ -25,6 +25,7 @@
 
 2. Informations de version :
 ----------------------------
+  version 0.2 : permet de lire et modifier les favoris
   version 0.1 : permet de lire les informations suivantes :
                 - nom d'utilisateur
                 - mot de passe
@@ -42,47 +43,16 @@
                 - adresse du server e-mail
                 - adresse IP du server e-mail
 
-3. Clefs de la base de registre lues :
---------------------------------------
-   HKEY_LOCAL_MACHINE\Software\Ineo\
-     EMAIL           : chaîne de caractères
-     FirstConnexion  : chaîne de caractères
-     Login           : chaîne de caractères
-     MailerPath      : chaîne de caractères
-     Modem           : chaîne de caractères
-     PagePersoURL    : chaîne de caractères
-     Passwd          : chaîne de caractères
-     POP3Login       : chaîne de caractères
-     POP3Server      : chaîne de caractères
-     POP3Server      : chaîne de caractères
-     RegisterIDA     : chaîne de caractères
-     RegisterIDB     : chaîne de caractères
-     RegisterIDC     : chaîne de caractères
-     RegisterIDD     : chaîne de caractères
-     SavePasswd      : chaîne de caractères
-     Sexe            : chaîne de caractères
-     ShortCut        : chaîne de caractères
-     TrancheAge      : chaîne de caractères
-     Zone            : chaîne de caractères
-     favoris\
-       FavorisMenu1  : chaîne de caractères
-            ...
-       FavorisMenu20 : chaîne de caractères
-       FavorisURL1   : chaîne de caractères
-            ...
-       FavorisURL20  : chaîne de caractères
-
-4. Futur version :
+3. Futur version :
 ------------------
-    La futur version (0.2) intégrera la lecture des favoris d'Oréka. Dans
-  l'avenir, on pourra  enregistrer  ces  informations  dans  la  base  de
-  registre, dans un fichier, un fichier de sauvergarde pour l'instalation
-  plus rapide d'oréka et l'impression de ses informations.
+    La  futur  version  (0.3)  intégrera  l'enregistrement  des   informations
+  dans la base de registre, dans un fichier, un fichier  de  sauvergarde  pour
+  l'instalation plus rapide d'oréka et l'impression de ses informations.
 
-5. Informations sur le logiciel :
+4. Informations sur le logiciel :
 ---------------------------------
-  Version      : 0.1
-  Date         : 28/01/2001
+  Version      : 0.2
+  Date         : 29/01/2001
   Autheur      : Bubule
   Architecture : Windows 9x/ME/NT/2000 pour processeur x86
   Langage      : Delphi 4
