@@ -1,0 +1,96 @@
+=================
+= Oréka Tracker =
+=================
+
+1. Questions fréquemment posées :
+---------------------------------
+  * Qu'est-ce qu'"Orécka Tracker" ?
+      Ce logiciel permet d'éditer tout les  paramèrtes  qu'Oréka  inscrit
+    dans la base de registre de votre système. Il permet  en  conséquence
+    de vérifier ou de modifier, les informations inscrites.
+
+  * Qu'est-ce qu'Oréka ?
+      Oréka est un fournisseur d'accès Internet  gratuit  (communications
+    comprises).
+
+  * Qu'elle configuration faut-il ?
+      Exactement la même qu'Oréka. C'est à dire Windows 9x.
+
+  * Avec qu'elle version du logiciel d'Oréka ce logiciel est compatible ?
+      Ce logiciel est compatible avec la version 0.632 et 0.700.
+
+  * Comment l'idée est venue ?
+      L'idée est venue en voulant savoir où les informations étaient
+    inscrite.
+
+2. Informations de version :
+----------------------------
+  version 0.1 : permet de lire les informations suivantes :
+                - nom d'utilisateur
+                - mot de passe
+                - le modem utilisé par cette connexion
+                - l'adresse de votre page perso
+                - votre sexe
+                - votre tranche d'âge
+                - votre zone local de téléphone
+                - vos identification d'enregistrement
+                - raccourci clavier
+                - enregistrement auto du mot de passe
+                - l'état de votre boîte e-mail
+                - nom d'utilisateur d'e-mail
+                - mot de passe d'e-mail
+                - adresse du server e-mail
+                - adresse IP du server e-mail
+
+3. Clefs de la base de registre lues :
+--------------------------------------
+   HKEY_LOCAL_MACHINE\Software\Ineo\
+     EMAIL           : chaîne de caractères
+     FirstConnexion  : chaîne de caractères
+     Login           : chaîne de caractères
+     MailerPath      : chaîne de caractères
+     Modem           : chaîne de caractères
+     PagePersoURL    : chaîne de caractères
+     Passwd          : chaîne de caractères
+     POP3Login       : chaîne de caractères
+     POP3Server      : chaîne de caractères
+     POP3Server      : chaîne de caractères
+     RegisterIDA     : chaîne de caractères
+     RegisterIDB     : chaîne de caractères
+     RegisterIDC     : chaîne de caractères
+     RegisterIDD     : chaîne de caractères
+     SavePasswd      : chaîne de caractères
+     Sexe            : chaîne de caractères
+     ShortCut        : chaîne de caractères
+     TrancheAge      : chaîne de caractères
+     Zone            : chaîne de caractères
+     favoris\
+       FavorisMenu1  : chaîne de caractères
+            ...
+       FavorisMenu20 : chaîne de caractères
+       FavorisURL1   : chaîne de caractères
+            ...
+       FavorisURL20  : chaîne de caractères
+
+4. Futur version :
+------------------
+    La futur version (0.2) intégrera la lecture des favoris d'Oréka. Dans
+  l'avenir, on pourra  enregistrer  ces  informations  dans  la  base  de
+  registre, dans un fichier, un fichier de sauvergarde pour l'instalation
+  plus rapide d'oréka et l'impression de ses informations.
+
+5. Informations sur le logiciel :
+---------------------------------
+  Version      : 0.1
+  Date         : 28/01/2001
+  Autheur      : Bubule
+  Architecture : Windows 9x/ME/NT/2000 pour processeur x86
+  Langage      : Delphi 4
+
+  Pour toutes suggestions, commentaires ou report de bug, écrivez moi à :
+    bubulemaster@caramail.com
+
+    Ce  logiciel  est  distribué  sous  licence  GPL,  lisez  le  fichier
+  GNU_LICENCE.TXT pour en savoir plus. Pour un résumé rapide, vous pouvez
+  librement diffuser, modifier ce logiciel à condition  d'y  inclure  les
+  sources (du programme originel) et la licence.
